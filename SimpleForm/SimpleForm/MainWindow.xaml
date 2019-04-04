@@ -65,5 +65,35 @@
             <CheckBox Content="Laptop" Margin="5"/>
             <CheckBox Content="Tablet" Margin="5"/>
         </StackPanel>
+
+        <TextBlock Grid.Row="3"
+                   Grid.Column="0"
+                   Text="Your job"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Bottom"
+                   Margin="5"/>
+        <ComboBox Grid.Row="3"
+                  Grid.Column="1"
+                  HorizontalAlignment="Left"
+                  VerticalAlignment="Bottom"
+                  Margin="5">
+            <ComboBoxItem Content="Programmer" />
+            <ComboBoxItem Content="Designer" />
+            <ComboBoxItem Content="Engineer" />
+            <ComboBoxItem Content="Manager" />
+        </ComboBox>
+
+        <TextBlock Grid.Row="4"
+                   Grid.Column="0"
+                   Text="Promised delivery date"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Bottom"
+                   Margin="5"/>
+        <Calendar Grid.Row="4" 
+                  Grid.Column="1" 
+                  HorizontalAlignment="Left" 
+                  VerticalAlignment="Bottom"
+                  Margin="5"/>
+
     </Grid>
 </Window>
