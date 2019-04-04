@@ -5,8 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LayoutWithCanvas"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" Height="400" Width="400">
+    <Canvas>
+        <Rectangle Canvas.Left="25"
+                   Canvas.Top="25"
+                   Width="50"
+                   Height="40"
+                   Fill="Red"/>
+        <Rectangle Canvas.Left="100"
+                   Canvas.Top="25"
+                   Width="50"
+                   Height="40"
+                   Fill="Orange"/>
+        <Rectangle Canvas.Left="125"
+                   Canvas.Top="40"
+                   Width="50"
+                   Height="40"
+                   Fill="Blue"/>
+        <Ellipse Canvas.Right="125"
+                   Canvas.Bottom="140"
+                   Width="40"
+                   Height="40"
+                   Fill="Green"/>
+    </Canvas>
 </Window>
