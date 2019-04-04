@@ -13,6 +13,7 @@
             <RowDefinition Height="2*"></RowDefinition>
             <RowDefinition Height="2*"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
@@ -23,5 +24,10 @@
         <Rectangle Fill="Orange" Grid.Row="2" Grid.Column="0"></Rectangle>
         <Rectangle Fill="Blue" Grid.Row="3" Grid.Column="1"></Rectangle>
         <Rectangle Fill="Purple" Grid.Row="4" Grid.Column="0"></Rectangle>
+        <Label Content="Let's play with width" 
+               FontSize="24" 
+               Grid.Row="5" 
+               Grid.Column="0"
+               Grid.ColumnSpan="2"></Label>
     </Grid>
 </Window>
