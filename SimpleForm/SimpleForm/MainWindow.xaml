@@ -49,5 +49,21 @@
             <RadioButton GroupName="Sex" Content="Male" IsChecked="True" Margin="5"/>
             <RadioButton GroupName="Sex" Content="Female" Margin="5"/>
         </StackPanel>
+
+        <TextBlock Grid.Row="2"
+                   Grid.Column="0"
+                   Text="Do you own"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Bottom"
+                   Margin="5"/>
+        <StackPanel Orientation="Horizontal"
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    VerticalAlignment="Stretch"
+                    HorizontalAlignment="Stretch">
+            <CheckBox Content="Desktop" Margin="5"/>
+            <CheckBox Content="Laptop" Margin="5"/>
+            <CheckBox Content="Tablet" Margin="5"/>
+        </StackPanel>
     </Grid>
 </Window>
