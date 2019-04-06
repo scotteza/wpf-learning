@@ -19,11 +19,5 @@ namespace DataBindingTwoWay
             };
             DataContext = _employee;
         }
-
-        private void ButtonChange_OnClick(object sender, RoutedEventArgs e)
-        {
-            _employee.Name += "X";
-            _employee.Title += "X";
-        }
     }
 }
