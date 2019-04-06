@@ -30,7 +30,7 @@
             Margin="5">
         </TextBlock>
         <TextBox 
-            Name="LastName"
+            Name="TextBoxFullName"
             Grid.Row="0"
             Grid.Column="1"
             Width="250"
@@ -55,14 +55,14 @@
             VerticalAlignment="Stretch"
             HorizontalAlignment="Stretch">
             <RadioButton 
-                Name="SexMale"
+                Name="RadioButtonSexMale"
                 GroupName="Sex" 
                 Content="Male" 
                 IsChecked="True" 
                 Margin="5">
             </RadioButton>
             <RadioButton 
-                Name="SexFemale"
+                Name="RadioButtonSexFemale"
                 GroupName="Sex" 
                 Content="Female" 
                 Margin="5">
@@ -110,6 +110,7 @@
         </TextBlock>
         <ComboBox 
             Name="ComboBoxJob"
+            SelectionChanged="ComboBoxJob_OnSelectionChanged"
             Grid.Row="3"
             Grid.Column="1"
             HorizontalAlignment="Left"
