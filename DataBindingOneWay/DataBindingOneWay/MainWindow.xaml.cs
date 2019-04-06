@@ -7,10 +7,23 @@ namespace DataBindingOneWay
     /// </summary>
     public partial class MainWindow : Window
     {
+        private readonly Employee _employee;
+
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = Employee.GetEmployee();
+            _employee = new Employee
+            {
+                Name = "Scott",
+                Title = "Owner"
+            };
+            DataContext = _employee;
+        }
+
+        private void ButtonChange_OnClick(object sender, RoutedEventArgs e)
+        {
+            _employee.Name += "X";
+            _employee.Title += "X";
         }
     }
 }
