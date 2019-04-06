@@ -24,5 +24,10 @@ namespace SimpleForm
         {
             InitializeComponent();
         }
+
+        private void ButtonSave_OnClick(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }

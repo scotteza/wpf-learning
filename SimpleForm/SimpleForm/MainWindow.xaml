@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SimpleForm"
         mc:Ignorable="d"
-        Title="MainWindow" Height="400" Width="400">
+        Title="Main Window" Height="400" Width="450" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
@@ -21,79 +21,139 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="2*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <TextBlock Grid.Row="0"
-                   Grid.Column="0"
-                   Text="Full Name"
-                   HorizontalAlignment="Right"
-                   VerticalAlignment="Bottom"
-                   Margin="5"/>
-        <TextBox Grid.Row="0"
-                 Grid.Column="1"
-                 Width="250"
-                 Height="20"
-                 HorizontalAlignment="Left"
-                 VerticalAlignment="Bottom"
-                 Margin="5"/>
+        <TextBlock 
+            Grid.Row="0"
+            Grid.Column="0"
+            Text="Full Name"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Bottom"
+            Margin="5">
+        </TextBlock>
+        <TextBox 
+            Name="LastName"
+            Grid.Row="0"
+            Grid.Column="1"
+            Width="250"
+            Height="20"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Bottom"
+            Margin="5">
+        </TextBox>
 
-        <TextBlock Grid.Row="1"
-                   Grid.Column="0"
-                   Text="Sex"
-                   HorizontalAlignment="Right"
-                   VerticalAlignment="Bottom"
-                   Margin="5"/>
-        <StackPanel Orientation="Horizontal"
-                    Grid.Row="1"
-                    Grid.Column="1"
-                    VerticalAlignment="Stretch"
-                    HorizontalAlignment="Stretch">
-            <RadioButton GroupName="Sex" Content="Male" IsChecked="True" Margin="5"/>
-            <RadioButton GroupName="Sex" Content="Female" Margin="5"/>
+        <TextBlock 
+            Grid.Row="1"
+            Grid.Column="0"
+            Text="Sex"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Bottom"
+            Margin="5">
+        </TextBlock>
+        <StackPanel 
+            Orientation="Horizontal"
+            Grid.Row="1"
+            Grid.Column="1"
+            VerticalAlignment="Stretch"
+            HorizontalAlignment="Stretch">
+            <RadioButton 
+                Name="SexMale"
+                GroupName="Sex" 
+                Content="Male" 
+                IsChecked="True" 
+                Margin="5">
+            </RadioButton>
+            <RadioButton 
+                Name="SexFemale"
+                GroupName="Sex" 
+                Content="Female" 
+                Margin="5">
+            </RadioButton>
         </StackPanel>
 
-        <TextBlock Grid.Row="2"
-                   Grid.Column="0"
-                   Text="Do you own"
-                   HorizontalAlignment="Right"
-                   VerticalAlignment="Bottom"
-                   Margin="5"/>
-        <StackPanel Orientation="Horizontal"
-                    Grid.Row="2"
-                    Grid.Column="1"
-                    VerticalAlignment="Stretch"
-                    HorizontalAlignment="Stretch">
-            <CheckBox Content="Desktop" Margin="5"/>
-            <CheckBox Content="Laptop" Margin="5"/>
-            <CheckBox Content="Tablet" Margin="5"/>
+        <TextBlock 
+            Grid.Row="2"
+            Grid.Column="0"
+            Text="Do you own"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Bottom"
+            Margin="5">
+        </TextBlock>
+        <StackPanel 
+            Orientation="Horizontal"
+            Grid.Row="2"
+            Grid.Column="1"
+            VerticalAlignment="Stretch"
+            HorizontalAlignment="Stretch">
+            <CheckBox 
+                Name="CheckBoxDesktop"
+                Content="Desktop" 
+                Margin="5">
+            </CheckBox>
+            <CheckBox 
+                Name="CheckBoxLaptop"
+                Content="Laptop" 
+                Margin="5">
+            </CheckBox>
+            <CheckBox 
+                Name="CheckBoxTablet"
+                Content="Tablet" 
+                Margin="5">
+            </CheckBox>
         </StackPanel>
 
-        <TextBlock Grid.Row="3"
-                   Grid.Column="0"
-                   Text="Your job"
-                   HorizontalAlignment="Right"
-                   VerticalAlignment="Bottom"
-                   Margin="5"/>
-        <ComboBox Grid.Row="3"
-                  Grid.Column="1"
-                  HorizontalAlignment="Left"
-                  VerticalAlignment="Bottom"
-                  Margin="5">
-            <ComboBoxItem Content="Programmer" />
-            <ComboBoxItem Content="Designer" />
-            <ComboBoxItem Content="Engineer" />
-            <ComboBoxItem Content="Manager" />
+        <TextBlock 
+            Grid.Row="3"
+            Grid.Column="0"
+            Text="Your job"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Bottom"
+            Margin="5">
+        </TextBlock>
+        <ComboBox 
+            Name="ComboBoxJob"
+            Grid.Row="3"
+            Grid.Column="1"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Bottom"
+            Margin="5">
+            <ComboBoxItem 
+                Content="Programmer">
+            </ComboBoxItem>
+            <ComboBoxItem 
+                Content="Designer">
+            </ComboBoxItem>
+            <ComboBoxItem 
+                Content="Engineer">
+            </ComboBoxItem>
+            <ComboBoxItem 
+                Content="Manager">
+            </ComboBoxItem>
         </ComboBox>
 
-        <TextBlock Grid.Row="4"
-                   Grid.Column="0"
-                   Text="Promised delivery date"
-                   HorizontalAlignment="Right"
-                   VerticalAlignment="Bottom"
-                   Margin="5"/>
-        <Calendar Grid.Row="4" 
-                  Grid.Column="1" 
-                  HorizontalAlignment="Left" 
-                  VerticalAlignment="Bottom"
-                  Margin="5"/>
+        <TextBlock 
+            Grid.Row="4"
+            Grid.Column="0"
+            Text="Promised delivery date"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Bottom"
+            Margin="5">
+        </TextBlock>
+        <Calendar 
+            Name="CalendarPromisedDeliveryDate"
+            Grid.Row="4" 
+            Grid.Column="1" 
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Bottom"
+            Margin="5">
+        </Calendar>
 
+        <Button 
+            Name="ButtonSave"
+            Click="ButtonSave_OnClick"
+            Grid.Row="5" 
+            Grid.Column="0"
+            Content="Save"
+            HorizontalAlignment="Right"
+            Margin="5">
+        </Button>
     </Grid>
 </Window>
